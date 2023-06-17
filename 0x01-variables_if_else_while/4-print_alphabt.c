@@ -1,11 +1,15 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 /**
- * main - Prints the alphabet.
- *  description: 'I never thought that it would pay off'
+ * main - Prints the alphabet without q and e.
+ *
  * Return: Always 0 (Success)
  */
-int i;
+int main(void)
+{
+	int i;
 
 	for (i = 97; i < 123; i++)
 	{
