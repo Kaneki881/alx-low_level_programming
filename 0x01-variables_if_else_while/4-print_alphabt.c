@@ -2,18 +2,19 @@
 
 /**
  * main - Prints the alphabet.
- *
+ *  description: 'I never thought that it would pay off'
  * Return: Always 0 (Success)
  */
-int main(void)
-{
-char alp[52] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	int i;
+int i;
 
-	for (i = 0; i < 52; i++)
+	for (i = 97; i < 123; i++)
 	{
-		putchar(alp[i]);
+		if (i != 101 && i != 113)
+		{
+			putchar(i);
+		}
 	}
 	putchar('\n');
 	return (0);
 }
+
