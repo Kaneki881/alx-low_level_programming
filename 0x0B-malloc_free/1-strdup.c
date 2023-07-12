@@ -9,19 +9,22 @@
  */
 char *_strdup(char *str)
 {
-	size_t len;
-	char *c;
+	char *strout;
+	unsigned int i, j;
 
 	if (str == NULL)
 		return (NULL);
 
-	len = strlen(str) + 1;
-	c = malloc(len * sizeof(char));
+	for (i = 0; str[i] != '\0'; i++)
+		;
 
-	if (c == NULL)
-		return (NULL); /* Failed to allocate memory */
+	strout = (char *)malloc(sizeof(char) * (i + 1));
 
-	strcpy(c, str);
+	if (strout == NULL)
+		return (NULL);
 
-	return (c);
+	for (j = 0; j <= i; j++)
+		strout[j] = str[j];
+
+	return (strout);
 }
